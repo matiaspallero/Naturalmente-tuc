@@ -1,7 +1,9 @@
 import React from "react";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Routes, Route } from "react-router";
 import Navbar from "./components/navbar.jsx";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Bienvenida from "./pages/bienvenida.jsx";
 
 const App = () => {
   return (
@@ -9,9 +11,9 @@ const App = () => {
       <>
         <Navbar />
       </>
-      <>
-      <h1 className="titulo">Bienvenidos a Naturalmente Tucumán</h1>
-      </>
+      <Routes>
+        <Route path="/" element={<Bienvenida />} />
+      </Routes>
     </div>
   );
 };

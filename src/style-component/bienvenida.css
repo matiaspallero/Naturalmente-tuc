@@ -1,0 +1,86 @@
+.titulo {
+    background-color: #e9faef;
+    /* Verde más claro para la sección de bienvenida. */
+    text-align: center;
+    background-image: url("https://img.freepik.com/fotos-premium/productos-dieteticos-mesa-vista-superior-enfoque-selectivo-keto_847296-42903.jpg");
+    /* Reemplazar con la URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    /* Asegúrese de que el texto sea visible en el fondo */
+    padding: 100px 0;
+    /* Aumente el relleno para un mejor espaciado */
+}
+
+p {
+  text-align: center;
+}
+
+/* Estilos para el contenedor de las tarjetas */
+.container-card {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+}
+
+/* Estilos para el grupo de tarjetas */
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+/* Estilos para cada tarjeta */
+.cartas {
+  flex: 1 1 calc(33.333% - 40px); /* Ajusta el ancho de las tarjetas */
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartas:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la imagen de la tarjeta */
+.card-img-top {
+  width: 100%;
+  height: 200px; /* Ajusta la altura de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Estilos para el cuerpo de la tarjeta */
+.card-body {
+  padding: 15px;
+}
+
+/* Estilos para el título de la tarjeta */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el texto de la tarjeta */
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Estilos para el footer de la tarjeta */
+.card-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+/* Estilos para el texto del footer */
+.text-muted {
+  font-size: 0.875rem;
+  color: #6c757d;
+}

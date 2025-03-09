@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Boton = () => {
+const Paginacion = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Boton = () => {
   )
 }
 
-export default Boton
+export default Paginacion

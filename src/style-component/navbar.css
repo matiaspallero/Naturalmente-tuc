@@ -1,82 +1,65 @@
-/* Estilos generales del navbar */
+/* Estilos generales para el Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #d1f7e1; /* Fondo claro */
-  padding: 5px 0; /* Padding superior e inferior aumentado */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  background-color: #d1f7e1; /* Fondo verde claro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 1rem 0; /* Espaciado interno */
 }
 
-/* Estilos del logo */
-.navbar-logo a {
-  color: #333; /* Color oscuro */
-  text-decoration: none;
+/* Estilos para el Brand (Logo o nombre de la marca) */
+.navbar-brand {
   font-size: 1.5rem;
-  font-weight: 600; /* Tipografía semi-negrita */
-  font-family: "Helvetica", sans-serif; /* Fuente minimalista */
-  padding: 0.5rem 0; /* Padding vertical para el logo */
+  color: #0d5725; /* Color de texto oscuro */
+  align-items: center;
 }
 
-/* Estilos de los enlaces */
-.navbar-links {
-  display: flex;
-  gap: 2rem; /* Espaciado entre enlaces aumentado */
+.navbar-brand:hover {
+  color: #28c147; /* Color verde al hacer hover */
 }
 
-.navbar-links a {
-  color: #555; /* Color gris oscuro */
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: "Helvetica", sans-serif; /* Fuente minimalista */
-  transition: color 0.3s ease;
-  padding: 0.5rem 0; /* Padding vertical para los enlaces */
+/* Estilos para los enlaces del Navbar */
+.nav-link {
+  font-size: 1.2rem;
+  color: #0d5725; /* Color de texto oscuro */
+  margin: 0 0.5rem; /* Espaciado entre enlaces */
+  transition: color 0.3s ease; /* Transición suave */
+  border-radius: 0.5rem; /* Bordes redondeados */
 }
 
-.navbar-links a:hover {
-  color: #0d4f0a; /* Color negro al pasar el mouse */
+.nav-link:hover {
+  background-color: #b9ddc8; /* Fondo verde claro al hacer hover */
+  color: #28c147; /* Color verde oscuro al hacer hover */
+  border-radius: 0.5rem; /* Bordes redondeados al hacer hover */
 }
 
-/* Estilos del botón de toggle (menú hamburguesa) */
-.navbar-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 0.5rem; /* Padding para el botón de toggle */
+.me-auto {
+  margin-left: 50%;
 }
 
-.navbar-toggle span {
-  width: 25px;
-  height: 2px; /* Línea más delgada */
-  background-color: #333; /* Color oscuro */
-  margin: 4px 0;
-  transition: all 0.3s ease;
+/* Estilos para el botón de toggle en dispositivos móviles */
+.navbar-toggler {
+  border: none; /* Sin borde */
+  padding: 0.5rem; /* Espaciado interno */
+}
+
+.navbar-toggler:focus {
+  outline: none; /* Sin contorno al hacer focus */
 }
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 1rem; /* Padding reducido en móviles */
+  .navbar-brand {
+    font-size: 1.5rem; /* Reducir el tamaño de la fuente en móviles */
   }
 
-  .navbar-links {
-    position: absolute;
-    top: 70px; /* Ajuste para el padding del navbar */
-    right: 0;
-    background-color: #d1f7e1; /* Fondo claro */
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    display: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    padding: 1rem 0; /* Padding vertical para los enlaces en móviles */
+  .nav-link {
+    margin: 0.5rem 0; /* Aumentar el espaciado entre enlaces en móviles */
+    padding: 0.5rem 1rem; /* Aumentar el padding para facilitar el clic */
+    width: 100%; /* Hacer que los enlaces ocupen todo el ancho */
+    text-align: center; /* Centrar el texto */
   }
 
-  .navbar-links.active {
-    display: flex;
-  }
-
-  .navbar-toggle {
-    display: flex;
+  .me-auto {
+    margin-left: 0; /* Eliminar el margen izquierdo en móviles */
   }
 }
+

@@ -1,31 +1,41 @@
-import React, { useState } from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 import "../style-component/navbar.css";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
+function NavbarPrincipal() {
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">
-        <a href="/">Naturalmente</a>
-      </div>
-      <div className={`navbar-links ${isOpen ? "active" : ""}`}>
-        <a href="/">Inicio</a>
-        <a href="/about">Acerca de</a>
-        <a href="/services">Servicios</a>
-        <a href="/contact">Contacto</a>
-      </div>
-      <div className="navbar-toggle" onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+    <Navbar expand="lg" className="navbar">
+      <Container>
+        <Navbar.Brand href="#home" className="navbar-brand">
+          Naturalmente
+        </Navbar.Brand>
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="navbar-toggler"
+        />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home" className="nav-link">
+              Inicio
+            </Nav.Link>
+            <Nav.Link href="#link" className="nav-link">
+              Productos
+            </Nav.Link>
+            <Nav.Link href="#link" className="nav-link">
+              Nosotros
+            </Nav.Link>
+            <Nav.Link href="#link" className="nav-link">
+              Contacto
+            </Nav.Link>
+            <Nav.Link href="#link" className="nav-link">
+              Ayuda
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-};
+}
 
-export default Navbar;
+export default NavbarPrincipal;
