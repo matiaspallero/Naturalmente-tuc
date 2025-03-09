@@ -1,0 +1,82 @@
+/* Estilos generales del navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d1f7e1; /* Fondo claro */
+  padding: 5px 0; /* Padding superior e inferior aumentado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilos del logo */
+.navbar-logo a {
+  color: #333; /* Color oscuro */
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600; /* Tipografía semi-negrita */
+  font-family: "Helvetica", sans-serif; /* Fuente minimalista */
+  padding: 0.5rem 0; /* Padding vertical para el logo */
+}
+
+/* Estilos de los enlaces */
+.navbar-links {
+  display: flex;
+  gap: 2rem; /* Espaciado entre enlaces aumentado */
+}
+
+.navbar-links a {
+  color: #555; /* Color gris oscuro */
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Helvetica", sans-serif; /* Fuente minimalista */
+  transition: color 0.3s ease;
+  padding: 0.5rem 0; /* Padding vertical para los enlaces */
+}
+
+.navbar-links a:hover {
+  color: #0d4f0a; /* Color negro al pasar el mouse */
+}
+
+/* Estilos del botón de toggle (menú hamburguesa) */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem; /* Padding para el botón de toggle */
+}
+
+.navbar-toggle span {
+  width: 25px;
+  height: 2px; /* Línea más delgada */
+  background-color: #333; /* Color oscuro */
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem; /* Padding reducido en móviles */
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 70px; /* Ajuste para el padding del navbar */
+    right: 0;
+    background-color: #d1f7e1; /* Fondo claro */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 1rem 0; /* Padding vertical para los enlaces en móviles */
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
