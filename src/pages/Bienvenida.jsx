@@ -6,10 +6,12 @@ import "../style-component/bienvenida.css";
 const Bienvenida = () => {
   return (
     <div>
-      <h1 className="titulo">Bienvenidos a Naturalmente</h1>
+      <div className="container-bienvenida">
+      <h1 className="titulo">Bienvenidos a Naturalmente Tucumán😋👌🏻</h1>
       <p>
         Naturalmente es una tienda online de productos naturales y orgánicos.
       </p>
+      </div>
 
       <div className="container-card">
         <CardGroup>

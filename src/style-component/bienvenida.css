@@ -1,4 +1,4 @@
-.titulo {
+.container-bienvenida {
     background-color: #e9faef;
     /* Verde más claro para la sección de bienvenida. */
     text-align: center;
@@ -12,8 +12,19 @@
     /* Aumente el relleno para un mejor espaciado */
 }
 
+.welcome-section h1 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
 p {
-  text-align: center;
+  color: white;
+  font-size: 25px;
 }
 
 /* Estilos para el contenedor de las tarjetas */
