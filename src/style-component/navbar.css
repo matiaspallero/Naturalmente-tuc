@@ -3,6 +3,9 @@
   background-color: #d1f7e1; /* Fondo verde claro */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
   padding: 1rem 0; /* Espaciado interno */
+  position: sticky; /* Hacer el navbar sticky */
+  top: 0; /* Pegar el navbar en la parte superior */
+  z-index: 1000; /* Asegurar que el navbar esté por encima de otros elementos */
 }
 
 /* Estilos para el Brand (Logo o nombre de la marca) */
@@ -45,6 +48,12 @@
   outline: none; /* Sin contorno al hacer focus */
 }
 
+/* Estilos para el Navbar en modo oscuro */
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+  color: #f8f9fa; /* Color de texto claro */
+}
+
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
   .navbar-brand {
@@ -60,6 +69,14 @@
 
   .me-auto {
     margin-left: 0; /* Eliminar el margen izquierdo en móviles */
+  }
+}
+
+/* Estilos para el Navbar en modo oscuro en dispositivos móviles */ 
+@media (max-width: 768px) {
+  .navbar-dark .navbar-brand,
+  .navbar-dark .nav-link {
+    color: #f8f9fa; /* Color de texto claro en modo oscuro */
   }
 }
 

@@ -16,19 +16,19 @@ function NavbarPrincipal() {
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" className="nav-link">
+            <Nav.Link href="#root" className="nav-link">
               Inicio
             </Nav.Link>
-            <Nav.Link href="#link" className="nav-link">
+            <Nav.Link href="#promos" className="nav-link">
               Productos
             </Nav.Link>
-            <Nav.Link href="#link" className="nav-link">
+            <Nav.Link href="#nosotros" className="nav-link">
               Nosotros
             </Nav.Link>
-            <Nav.Link href="#link" className="nav-link">
+            <Nav.Link href="#contacto" className="nav-link">
               Contacto
             </Nav.Link>
-            <Nav.Link href="#link" className="nav-link">
+            <Nav.Link href="#ayuda" className="nav-link">
               Ayuda
             </Nav.Link>
           </Nav>

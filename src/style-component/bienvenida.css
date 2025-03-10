@@ -1,15 +1,11 @@
 .container-bienvenida {
-    background-color: #e9faef;
-    /* Verde más claro para la sección de bienvenida. */
+    background-color: #e9faef; /* Verde más claro para la sección de bienvenida. */
     text-align: center;
-    background-image: url("https://img.freepik.com/fotos-premium/productos-dieteticos-mesa-vista-superior-enfoque-selectivo-keto_847296-42903.jpg");
-    /* Reemplazar con la URL de tu imagen */
+    background-image: url("https://www.vittal.com.ar/gestion/wp-content/uploads/2023/04/alimentacion-saludable.jpg"); /* Reemplazar con la URL de tu imagen */
     background-size: cover;
     background-position: center;
-    color: #ffffff;
-    /* Asegúrese de que el texto sea visible en el fondo */
-    padding: 100px 0;
-    /* Aumente el relleno para un mejor espaciado */
+    color: #ffffff; /* Asegúrese de que el texto sea visible en el fondo */
+    padding: 100px 0; /* Aumente el relleno para un mejor espaciado */
 }
 
 .welcome-section h1 {
@@ -22,7 +18,7 @@ h1 {
   font-weight: bold;
 }
 
-p {
+.subtitulo {
   color: white;
   font-size: 25px;
 }
@@ -32,6 +28,7 @@ p {
   padding: 20px;
   margin: 0 auto;
   max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+  margin-top: 70px;
 }
 
 /* Estilos para el grupo de tarjetas */
@@ -94,4 +91,35 @@ p {
 .text-muted {
   font-size: 0.875rem;
   color: #6c757d;
+}
+
+.container-promos {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+  margin-top: 70px;
+  margin-bottom: 50px;
+  display: grid;
+  grid: 1px;
+}
+
+.cartas:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container-footer {
+  background-color: #c3e7d2;
+  padding: 20px 0;
+  text-align: center;
+}
+
+p {
+  color: #555;
+  font-size: 1.2rem;
 }
