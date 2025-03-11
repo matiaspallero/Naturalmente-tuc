@@ -8,12 +8,12 @@
     padding: 100px 0; /* Aumente el relleno para un mejor espaciado */
 }
 
-.welcome-section h1 {
+.welcome-section .titulo {
   color: #ffffff;
   margin-bottom: 20px;
 }
 
-h1 {
+.titulo {
   font-size: 2.8rem;
   font-weight: bold;
 }
@@ -28,7 +28,13 @@ h1 {
   padding: 20px;
   margin: 0 auto;
   max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
-  margin-top: 70px;
+  margin-top: 50px;
+}
+
+.destacado {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #000;
 }
 
 /* Estilos para el grupo de tarjetas */
@@ -98,9 +104,42 @@ h1 {
   margin: 0 auto;
   max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
   margin-top: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   display: grid;
   grid: 1px;
+}
+
+.tipos {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #000;
+}
+
+.ver-catalogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 70px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #31a361;
+}
+
+.btn:hover {
+  background-color: #0d5725;
+}
+
+a {
+  text-decoration: none;
+  color: #f8f9fa;
 }
 
 .cartas:hover {
@@ -108,9 +147,34 @@ h1 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 50px;
+.section-us {
+  margin-top: 50px;
+  width: 100%;
+  height: 700px;
+  background-image: url("https://lasfor.com.ar/wp-content/uploads/2022/04/LSF04_BLOG_Portada5CosasAbrirDietetica_RX.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-nosotros {
+  position: absolute;
+  padding: 20px;
+  background-color: #9c9c9c;
+}
+
+.us {
+  color: #3b9643;
+  font-size: 2.8rem;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.parrafo {
+  color: #4ac45e;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 20px;
 }
 
 .container-footer {
@@ -119,7 +183,8 @@ h2 {
   text-align: center;
 }
 
-p {
+.piso {
   color: #555;
   font-size: 1.2rem;
 }
+

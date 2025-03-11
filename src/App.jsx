@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router";
 import Navbar from "./components/Navbar.jsx";
 import Bienvenida from "./pages/Bienvenida.jsx";
+import "./components/BotonFlotante.jsx";
 
 const App = () => {
   return (

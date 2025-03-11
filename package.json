@@ -14,6 +14,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.7",
+    "@mui/joy": "^5.0.0-beta.51",
     "@mui/material": "^6.4.7",
     "antd": "^5.24.3",
     "bootstrap": "^5.3.3",
