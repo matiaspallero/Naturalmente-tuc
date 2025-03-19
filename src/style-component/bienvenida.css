@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 .container-bienvenida {
     background-color: #e9faef; /* Verde más claro para la sección de bienvenida. */
     text-align: center;
@@ -150,17 +152,25 @@ a {
 .section-us {
   margin-top: 50px;
   width: 100%;
-  height: 700px;
+  height: 800px;
   background-image: url("https://lasfor.com.ar/wp-content/uploads/2022/04/LSF04_BLOG_Portada5CosasAbrirDietetica_RX.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .container-nosotros {
   position: absolute;
+  top: 28%; /* Ajusta según sea necesario */
+  left: 16%; /* Ajusta según sea necesario */
+  transform: translate(-50%, -50%); /* Centra el contenedor */
   padding: 20px;
-  background-color: transparent;
+  background-color: rgba(68, 68, 68, 0.5); /* Fondo semi-transparente */
+  backdrop-filter: blur(1px); /* Aplica el efecto de desenfoque */
+  border-radius: 10px; /* Opcional: para bordes redondeados */
+  width: 80%; /* Ajusta el ancho según sea necesario */
+  max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
 }
 
 .us {

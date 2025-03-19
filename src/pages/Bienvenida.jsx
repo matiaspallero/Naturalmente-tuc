@@ -8,6 +8,7 @@ import { FloatButton } from "antd"; // Importa FloatButton de antd
 import { UpOutlined } from "@ant-design/icons"; // Importa el ícono UpOutlined
 import Button from "@mui/material/Button";
 
+
 const Bienvenida = () => {
   return (
     <div>
@@ -86,7 +87,7 @@ const Bienvenida = () => {
                 <Card className="cartas">
                   <Card.Img variant="top" src={producto.imagen} />
                   <Card.Body>
-                    <Card.Title>{producto.titulo}</Card.Title>
+                    <Card.Title className="items-center">{producto.titulo}</Card.Title>
                     <Card.Text>{producto.descripcion}</Card.Text>
                   </Card.Body>
                 </Card>
@@ -146,54 +147,54 @@ const productos = [
     id: 1,
     imagen:
       "https://farmacialavera.com/wp-content/uploads/2023/05/Productos-dieteticos-Farmacia-La-Vera.jpg",
-    titulo: "Producto 1",
-    descripcion: "Descripción del Producto 1.",
+    titulo: "Granos",
+    descripcion: ".",
   },
   {
     id: 2,
     imagen:
       "https://www.elpincel.es/images/alimentacion-natural-saludable-vigo.jpg",
-    titulo: "Producto 2",
+    titulo: "Semillas",
     descripcion: "Descripción del Producto 2.",
   },
   {
     id: 3,
     imagen: "https://www.dieteticastomy.com.ar/content/img/productos/6.jpg",
-    titulo: "Producto 3",
+    titulo: "Frutas",
     descripcion: "Descripción del Producto 3.",
   },
   {
     id: 4,
     imagen:
       "https://cdn.pixabay.com/photo/2015/04/05/10/13/natural-products-707575_1280.jpg",
-    titulo: "Producto 4",
+    titulo: "Sin TACC",
     descripcion: "Descripción del Producto 4.",
   },
   {
     id: 5,
     imagen:
       "https://vocescriticas-s3.cdn.net.ar/s3i233/2023/06/vocescriticas/images/07/03/70385_6002d3364bf98660da11c52292e794f4bd2ef2fc182ccd107c829cfa92fba995/lg.webp",
-    titulo: "Producto 5",
+    titulo: "Sin Gluten",
     descripcion: "Descripción del Producto 5.",
   },
   {
     id: 6,
     imagen:
       "https://irp-cdn.multiscreensite.com/b94848d4/MOBILE/jpg/851739-el-caldero-de-ix-hierbas.jpg",
-    titulo: "Producto 6",
+    titulo: "X",
     descripcion: "Descripción del Producto 6.",
   },
   {
     id: 7,
     imagen:
       "https://previews.123rf.com/images/pepsee30/pepsee301509/pepsee30150900031/45834272-frutas-en-yogur-alimentos-saludables-productos-l%C3%A1cteos-alimentos-naturales-alimentos-diet%C3%A9ticos.jpg",
-    titulo: "Producto 7",
+    titulo: "X",
     descripcion: "Descripción del Producto 7.",
   },
   {
     id: 8,
     imagen: "https://lacolegiala.com/cdn/shop/products/C7A4286-16_1445x.jpg",
-    titulo: "Producto 8",
+    titulo: "X",
     descripcion: "Descripción del Producto 8.",
   },
 ];
