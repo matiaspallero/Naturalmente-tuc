@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Estilos para la sección de bienvenida */
 .container-bienvenida {
     background-color: #e9faef; /* Verde más claro para la sección de bienvenida. */
     text-align: center;
@@ -24,8 +25,10 @@
   color: white;
   font-size: 25px;
 }
+/* Termina estilos para la sección de bienvenida */
 
-/* Estilos para el contenedor de las tarjetas */
+
+/* Estilos para el contenedor de los productos destacados */
 .container-card {
   padding: 20px;
   margin: 0 auto;
@@ -95,7 +98,7 @@
   text-align: center;
 }
 
-/* Estilos para el texto del footer */
+/* Estilos para el texto del footer de la carta */
 .text-muted {
   font-size: 0.875rem;
   color: #6c757d;
@@ -110,7 +113,9 @@
   display: grid;
   grid: 1px;
 }
+/* Termina estilos para el contenedor de los productos destacados */
 
+/* Estilos para la sección de tipos de productos */
 .tipos {
   text-align: center;
   margin-bottom: 50px;
@@ -148,7 +153,10 @@ a {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+/* Termina estilos para la sección de tipos de productos */
 
+
+/* Estilos para la sección "Nosotros" */
 .section-us {
   margin-top: 50px;
   width: 100%;
@@ -186,7 +194,10 @@ a {
   font-weight: bold;
   padding: 20px;
 }
+/* Termina seccion de "Nosotros" */
 
+
+/* Estilos para el "footer" */
 .container-footer {
   background-color: #c3e7d2;
   padding: 20px 0;
@@ -197,4 +208,4 @@ a {
   color: #555;
   font-size: 1.2rem;
 }
-
+/* Termina estilos para el "footer" */
