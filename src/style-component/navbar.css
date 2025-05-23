@@ -31,7 +31,6 @@
 .nav-link:hover {
   background-color: #b9ddc8; /* Fondo verde claro al hacer hover */
   color: #28c147; /* Color verde oscuro al hacer hover */
-  border-radius: 0.5rem; /* Bordes redondeados al hacer hover */
 }
 
 .me-auto {
@@ -63,21 +62,11 @@
   .nav-link {
     margin: 0.5rem 0; /* Aumentar el espaciado entre enlaces en móviles */
     padding: 0.5rem 1rem; /* Aumentar el padding para facilitar el clic */
-    width: 100%; /* Hacer que los enlaces ocupen todo el ancho */
+    width: 100%; /* Hacer que los enlaces ocupen todo el ancho */ /* Estilos para el Navbar en modo oscuro en dispositivos móviles */
     text-align: center; /* Centrar el texto */
-  }
-
-  .me-auto {
-    margin-left: 0; /* Eliminar el margen izquierdo en móviles */
-  }
-}
-
-/* Estilos para el Navbar en modo oscuro en dispositivos móviles */ 
-@media (max-width: 768px) {
-  .navbar-dark .navbar-brand,
-  .navbar-dark .nav-link {
-    color: #f8f9fa; /* Color de texto claro en modo oscuro */
+    .navbar-dark .navbar-brand,
+    .navbar-dark .nav-link {
+      color: #f8f9fa; /* Color de texto claro en modo oscuro */
+    }
   }
 }
-
-

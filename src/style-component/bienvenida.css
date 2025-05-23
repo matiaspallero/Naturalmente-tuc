@@ -1,4 +1,4 @@
-@import "tailwindcss";
+
 
 /* Estilos para la sección de bienvenida */
 .container-bienvenida {
@@ -110,8 +110,8 @@
   max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
   margin-top: 70px;
   margin-bottom: 10px;
-  display: grid;
-  grid: 1px;
+  display: grid; /* Revisa qué propiedades de grid necesitas aquí. */
+  /* grid: 1px; <- Esto no es una propiedad de grid válida en este contexto. Quizás querías 'gap: 1px;'? */
 }
 /* Termina estilos para el contenedor de los productos destacados */
 
@@ -148,11 +148,6 @@ a {
   text-decoration: none;
   color: #f8f9fa;
 }
-
-.cartas:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
 /* Termina estilos para la sección de tipos de productos */
 
 
@@ -174,7 +169,7 @@ a {
   left: 16%; /* Ajusta según sea necesario */
   transform: translate(-50%, -50%); /* Centra el contenedor */
   padding: 20px;
-  background-color: rgba(68, 68, 68, 0.5); /* Fondo semi-transparente */
+  background-color: rgba(15, 15, 15, 0.2); /* Fondo semi-transparente */
   backdrop-filter: blur(1px); /* Aplica el efecto de desenfoque */
   border-radius: 10px; /* Opcional: para bordes redondeados */
   width: 80%; /* Ajusta el ancho según sea necesario */
