@@ -13,9 +13,7 @@ function NavbarPrincipal() {
   return (
     <Navbar expand="lg" className="navbar">
       <Container>
-        <Navbar.Brand href="#home" className="navbar-brand">
-          Naturalmente
-        </Navbar.Brand>
+        <Link to="/Bienvenida" className="navbar-brand"> Naturalmente </Link>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           className="navbar-toggler"
@@ -25,7 +23,7 @@ function NavbarPrincipal() {
             <Nav.Link href="#root" className="nav-link">
               Inicio
             </Nav.Link>
-            <Nav.Link href="#productos" className="nav-link">
+            <Nav.Link to="/Catalogo" href="#productos" className="nav-link">
               Productos
             </Nav.Link>
             <Nav.Link href="#nosotros" className="nav-link">

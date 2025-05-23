@@ -1,5 +1,3 @@
-
-
 /* Estilos para la sección de bienvenida */
 .container-bienvenida {
     background-color: #e9faef; /* Verde más claro para la sección de bienvenida. */
@@ -157,6 +155,7 @@ a {
   width: 100%;
   height: 800px;
   background-image: url("https://lasfor.com.ar/wp-content/uploads/2022/04/LSF04_BLOG_Portada5CosasAbrirDietetica_RX.jpg");
+  backdrop-filter: blur(1px);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
