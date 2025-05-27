@@ -9,18 +9,16 @@
     padding: 100px 0; /* Aumente el relleno para un mejor espaciado */
 }
 
-.welcome-section .titulo {
+#home #titulo {
   color: #ffffff;
   margin-bottom: 20px;
 }
 
-.titulo {
+#titulo {
   font-size: 2.8rem;
-  font-weight: bold;
 }
 
-.subtitulo {
-  color: white;
+#subtitulo {
   font-size: 25px;
 }
 /* Termina estilos para la sección de bienvenida */
@@ -34,8 +32,9 @@
   margin-top: 50px;
 }
 
-.destacado {
+#Destacados {
   text-align: center;
+  margin-top: 50px;
   margin-bottom: 50px;
   color: #000;
 }

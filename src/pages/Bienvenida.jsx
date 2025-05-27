@@ -1,20 +1,18 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/CardGroup";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import Card from "react-bootstrap/Card"; // Se mantiene para la sección "Destacados"
+import CardGroup from "react-bootstrap/CardGroup"; // Se mantiene para la sección "Destacados"
 import { FloatButton } from "antd"; // Importa FloatButton de antd
 import { UpOutlined } from "@ant-design/icons"; // Importa el ícono UpOutlined
 import { Link } from "react-router";
-
+import '../style-component/bienvenida.css';
 
 const Bienvenida = () => {
   return (
     <div className="!bg-fondo">
       {/* Sección Hero */}
       <div id="home" className="bg-[url(src/assets/Portada.png)] bg-no-repeat bg-cover bg-center h-80 flex flex-col items-center justify-center text-center p-6">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 animate-fadeIn text-white">Bienvenidos a Naturalmente Tucumán😋👌🏻</h1>
-        <p className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto animate-fadeInUp text-white">
+        <h1 id="titulo" className="font-bold mb-6 animate-fadeIn text-white">Bienvenidos a Naturalmente Tucumán</h1>
+        <p id="subtitulo" className="mx-auto animate-fadeInUp text-white">
           Naturalmente es una tienda online de productos naturales y orgánicos.
         </p>
       </div>
@@ -22,16 +20,17 @@ const Bienvenida = () => {
       {/* Sección Destacados */}
       <section id="promos" className="py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10 sm:mb-12">Destacados</h2>
+          <h2 id="Destacados" className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8 sm:mb-12">Destacados</h2>
           {/* Usamos CardGroup de react-bootstrap. Tailwind se usa para el estilo individual de las Card. */}
-          <CardGroup className="flex flex-wrap justify-center"> {/* Añadido flex-wrap y justify-center para mejor responsividad con CardGroup */}
+          <CardGroup className="flex flex-wrap justify-center gap-6 "> {/* Añadido flex-wrap y justify-center para mejor responsividad con CardGroup */}
             <Card className="m-3 flex-grow basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 max-w-sm bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
               <Card.Img
                 variant="top"
                 src="src/assets/different-pills-herbs-flowers-on-260nw-2380501293.jpg"
+                alt="Producto destacado 1"
               />
               <Card.Body>
-                <Card.Title>Producto 1</Card.Title>
+                <Card.Title className="text-center">Producto 1</Card.Title>
                 <Card.Text>
                   Una selección especial de nuestros productos más populares y recomendados por nuestros clientes.
                 </Card.Text>
@@ -41,9 +40,10 @@ const Bienvenida = () => {
               <Card.Img
                 variant="top"
                 src="src/assets/alimentos-dieteticos.jpg"
+                alt="Novedad saludable"
               />
               <Card.Body>
-                <Card.Title>Novedad Saludable</Card.Title>
+                <Card.Title className="text-center">Novedad Saludable</Card.Title>
                 <Card.Text>
                   Descubre la calidad y el sabor que nos caracteriza con estas ofertas imperdibles.
                 </Card.Text>
@@ -53,10 +53,11 @@ const Bienvenida = () => {
               <Card.Img
                 variant="top"
                 src="src/assets/alimentos-light-678x381.jpg"
+                alt="Opción ligera"
               />
               <Card.Body>
-                <Card.Title>Opción Ligera</Card.Title>
-                <Card.Text>
+                <Card.Title className="text-center">Opción Ligera</Card.Title>
+                <Card.Text className="text-justify">
                   Ideales para complementar tu dieta y estilo de vida saludable sin sacrificar el sabor.
                 </Card.Text>
               </Card.Body>
@@ -65,23 +66,28 @@ const Bienvenida = () => {
         </div>
       </section>
 
-      {/* Sección Tipos de Productos */}
+      {/* Sección Tipos de Productos (Refactorizada a Tailwind CSS) */}
       <section id="productos" className="py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10 sm:mb-12">Tipos de productos</h2>
-          <Row xs={1} md={4} className="g-4">
+          <div className="grid grid-cols-4 sm:grid-cols-2 gap-6 ">
             {productos.map((producto) => (
-              <Col key={producto.id}>
-                <Card className="h-full bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                  <Card.Img variant="top" src={producto.imagen} className="w-full h-48 object-cover"/>
-                  <Card.Body>
-                    <Card.Title className="text-xl font-semibold text-gray-800">{producto.titulo}</Card.Title>
-                    <Card.Text className="text-gray-600 text-sm">{producto.descripcion}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
+              <div
+                key={producto.id}
+                className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col"
+              >
+                <img
+                  src={producto.imagen}
+                  alt={producto.titulo} // Atributo alt para accesibilidad
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-5 flex flex-col flex-grow"> {/* p-5 para padding, flex-grow para que el texto ocupe espacio */}
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2 text-center">{producto.titulo}</h3>
+                  <p className="text-gray-600 text-sm text-center">{producto.descripcion}</p>
+                </div>
+              </div>
             ))}
-          </Row>
+          </div>
         </div>
         <div className="text-center mt-10 sm:mt-12">
           <Link
