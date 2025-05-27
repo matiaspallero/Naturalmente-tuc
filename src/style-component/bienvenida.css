@@ -9,7 +9,7 @@
     padding: 100px 0; /* Aumente el relleno para un mejor espaciado */
 }
 
-#home #titulo {
+.home .titulo {
   color: #ffffff;
   margin-bottom: 20px;
 }
@@ -113,7 +113,7 @@
 /* Termina estilos para el contenedor de los productos destacados */
 
 /* Estilos para la sección de tipos de productos */
-.tipos {
+#titulo-productos {
   text-align: center;
   margin-bottom: 50px;
   color: #000;
@@ -130,11 +130,15 @@
   margin-bottom: 70px;
 }
 
-.btn {
+#Grilla {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+#btnCatalogo {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #31a361;
 }
 
 .btn:hover {

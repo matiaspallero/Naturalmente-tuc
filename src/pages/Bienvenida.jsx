@@ -4,60 +4,60 @@ import CardGroup from "react-bootstrap/CardGroup"; // Se mantiene para la secci�
 import { FloatButton } from "antd"; // Importa FloatButton de antd
 import { UpOutlined } from "@ant-design/icons"; // Importa el ícono UpOutlined
 import { Link } from "react-router";
-import '../style-component/bienvenida.css';
+
 
 const Bienvenida = () => {
   return (
     <div className="!bg-fondo">
       {/* Sección Hero */}
-      <div id="home" className="bg-[url(src/assets/Portada.png)] bg-no-repeat bg-cover bg-center h-80 flex flex-col items-center justify-center text-center p-6">
-        <h1 id="titulo" className="font-bold mb-6 animate-fadeIn text-white">Bienvenidos a Naturalmente Tucumán</h1>
-        <p id="subtitulo" className="mx-auto animate-fadeInUp text-white">
+      <div className="!bg-[url(src/assets/Portada.png)] !bg-no-repeat !bg-cover !bg-center !h-80 !flex !flex-col !items-center !justify-center !text-center !p-6">
+        <h1 className="!font-bold !mb-6 !animate-fadeIn !text-white !text-5xl">Bienvenidos a Naturalmente Tucumán</h1>
+        <p className="!mx-auto !animate-fadeInUp !text-white !text-xl">
           Naturalmente es una tienda online de productos naturales y orgánicos.
         </p>
       </div>
 
       {/* Sección Destacados */}
-      <section id="promos" className="py-12 sm:py-16 lg:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="Destacados" className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8 sm:mb-12">Destacados</h2>
+      <section className="!py-12 !sm:py-16 !lg:py-20">
+        <div className="!container !mx-auto !px-4 !sm:px-6 !lg:px-8">
+          <h2 className="!text-3xl !sm:text-4xl !font-bold !text-center !text-gray-800 !mb-8 !sm:mb-12 !mt-4">Destacados</h2>
           {/* Usamos CardGroup de react-bootstrap. Tailwind se usa para el estilo individual de las Card. */}
-          <CardGroup className="flex flex-wrap justify-center gap-6 "> {/* Añadido flex-wrap y justify-center para mejor responsividad con CardGroup */}
-            <Card className="m-3 flex-grow basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 max-w-sm bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+          <CardGroup className="!flex !flex-wrap !justify-center !gap-6 "> {/* Añadido flex-wrap y justify-center para mejor responsividad con CardGroup */}
+            <Card className="!m-3 !flex-grow !basis-full !sm:basis-1/2 !md:basis-1/3 !lg:basis-1/4 !max-w-sm !bg-white !rounded-xl !shadow-lg overflow-hidden transform hover:scale-105 !transition-transform !duration-200 !ease-in-out">
               <Card.Img
                 variant="top"
                 src="src/assets/different-pills-herbs-flowers-on-260nw-2380501293.jpg"
                 alt="Producto destacado 1"
               />
               <Card.Body>
-                <Card.Title className="text-center">Producto 1</Card.Title>
-                <Card.Text>
+                <Card.Title className="!text-center !font-semibold">Sin TACC</Card.Title>
+                <Card.Text className="!text-center">
                   Una selección especial de nuestros productos más populares y recomendados por nuestros clientes.
                 </Card.Text>
               </Card.Body>
             </Card>
-            <Card className="m-3 flex-grow basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 max-w-sm bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+            <Card className="!m-3 !flex-grow !basis-full !sm:basis-1/2 !md:basis-1/3 !lg:basis-1/4 !max-w-sm !bg-white !rounded-xl !shadow-lg overflow-hidden transform hover:scale-105 !transition-transform !duration-200 !ease-in-out">
               <Card.Img
                 variant="top"
                 src="src/assets/alimentos-dieteticos.jpg"
                 alt="Novedad saludable"
               />
               <Card.Body>
-                <Card.Title className="text-center">Novedad Saludable</Card.Title>
-                <Card.Text>
+                <Card.Title className="!text-center !font-semibold">Novedad Saludable</Card.Title>
+                <Card.Text className="!text-center">
                   Descubre la calidad y el sabor que nos caracteriza con estas ofertas imperdibles.
                 </Card.Text>
               </Card.Body>
             </Card>
-            <Card className="m-3 flex-grow basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 max-w-sm bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+            <Card className="!m-3 !flex-grow !basis-full !sm:basis-1/2 !md:basis-1/3 !lg:basis-1/4 !max-w-sm !bg-white !rounded-xl !shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-200 ease-in-out">
               <Card.Img
                 variant="top"
                 src="src/assets/alimentos-light-678x381.jpg"
                 alt="Opción ligera"
               />
               <Card.Body>
-                <Card.Title className="text-center">Opción Ligera</Card.Title>
-                <Card.Text className="text-justify">
+                <Card.Title className="!text-center !font-semibold">Opción Ligera</Card.Title>
+                <Card.Text className="!text-center">
                   Ideales para complementar tu dieta y estilo de vida saludable sin sacrificar el sabor.
                 </Card.Text>
               </Card.Body>
@@ -67,32 +67,32 @@ const Bienvenida = () => {
       </section>
 
       {/* Sección Tipos de Productos (Refactorizada a Tailwind CSS) */}
-      <section id="productos" className="py-12 sm:py-16 lg:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10 sm:mb-12">Tipos de productos</h2>
-          <div className="grid grid-cols-4 sm:grid-cols-2 gap-6 ">
+      <section className="!py-12 !sm:py-16 !lg:py-20">
+        <div className="!container !mx-auto !px-4 !sm:px-6 !lg:px-8">
+          <h2 className="!text-3xl !sm:text-4xl !font-bold text-center !text-gray-800 !mb-10 !sm:mb-12">Tipos de productos</h2>
+          <div className="!grid !grid-cols-4 !sm:grid-cols-2 !gap-6 ">
             {productos.map((producto) => (
               <div
                 key={producto.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out flex flex-col"
+                className="!bg-white !rounded-xl !shadow-lg !overflow-hidden !transform hover:scale-105 !transition-transform !duration-300 !ease-in-out !flex !flex-col"
               >
                 <img
                   src={producto.imagen}
                   alt={producto.titulo} // Atributo alt para accesibilidad
-                  className="w-full h-48 object-cover"
+                  className="!w-full !h-48 !object-cover"
                 />
-                <div className="p-5 flex flex-col flex-grow"> {/* p-5 para padding, flex-grow para que el texto ocupe espacio */}
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2 text-center">{producto.titulo}</h3>
-                  <p className="text-gray-600 text-sm text-center">{producto.descripcion}</p>
+                <div className="!p-5 !flex !flex-col !flex-grow"> {/* p-5 para padding, flex-grow para que el texto ocupe espacio */}
+                  <h3 className="!text-xl !font-semibold !text-gray-800 !mb-2 !text-center">{producto.titulo}</h3>
+                  <p className="!text-gray-600 !text-sm !text-center">{producto.descripcion}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-        <div className="text-center mt-10 sm:mt-12">
+        <div className="!text-center !mt-10 !sm:mt-12">
           <Link
             to="/catalogo"
-            className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
+            className="inline-block !bg-green-600 !hover:bg-green-500 !text-white !font-semibold !py-3 !px-8 !rounded-lg !shadow-md !hover:shadow-lg !transition-all !duration-300 !transform hover:scale-105 !text-lg"
           >
             Ver Catálogo Completo
           </Link>
@@ -100,22 +100,22 @@ const Bienvenida = () => {
       </section>
 
       {/* Sección Nosotros */}
-      <section id="nosotros" className="py-12 sm:py-16 lg:py-20 bg-green-700 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8">Nosotros</h2>
-          <div className="max-w-3xl mx-auto space-y-4 text-lg leading-relaxed">
+      <section className="!bg-[url(./src/assets/dietetica.png)] !bg-no-repeat !bg-cover !bg-center h-100 !py-12 !sm:py-16 !lg:py-20 !bg-green-500 !text-white">
+        <div className="!container !mx-auto !px-4 !sm:px-6 !lg:px-8 !text-left !backdrop-blur-sm">
+          <h2 className="!text-2xl !sm:text-4xl !font-bold !mb-6 !sm:mb-8">Nosotros</h2>
+          <div className="!max-w-3xl !space-y-4 !text-lg !leading-relaxed">
             <p>Somos una tienda online apasionada por los productos naturales y orgánicos. Nuestro objetivo es brindarte opciones de calidad que contribuyan a tu bienestar y estén al alcance de todos.</p>
             <p>Creemos en el poder de la naturaleza para nutrir y cuidar nuestro cuerpo. Por eso, seleccionamos cuidadosamente cada artículo de nuestro catálogo.</p>
             <p>Nos encontramos en el corazón de Tucumán, listos para llevar lo mejor de la naturaleza a tu hogar. ¡Gracias por elegirnos!</p>
-            <p className="mt-4 font-semibold">Ubicados en Avellaneda 123, Concepción, Tucumán, Argentina.</p>
+            <p className="!mt-4 !font-semibold">Ubicados en Avellaneda 123, Concepción, Tucumán, Argentina.</p>
           </div>
         </div>
       </section>
 
       {/* Sección Footer - Consistente con Catalogo.jsx */}
-      <footer className="bg-gray-800 text-white text-center p-6 mt-12">
+      <footer className="!bg-gray-800 !text-white !text-center !p-6 !mt-12">
         <p>&copy; {new Date().getFullYear()} Naturalmente Tucumán. Todos los derechos reservados.</p>
-        <p className="text-sm mt-1">Descubre más sobre un estilo de vida saludable con nosotros.</p>
+        <p className="!text-sm !mt-1">Descubre más sobre un estilo de vida saludable con nosotros.</p>
       </footer>
 
       <FloatButton.BackTop

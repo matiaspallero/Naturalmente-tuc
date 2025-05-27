@@ -10,3 +10,15 @@
     font-size: 25px;
     margin-bottom: 10px;
 }
+
+#btnCarro {
+    background-color: #31a361;
+    color: white;
+    font-size: bold;
+}
+
+#btnCarro:hover {
+    background-color: #0d5725;
+    color: white;
+    font-size: bold;
+}

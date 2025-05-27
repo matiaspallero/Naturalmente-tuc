@@ -6,7 +6,7 @@ import { UpOutlined } from "@ant-design/icons"; // Importa el ícono UpOutlined
 
 function Catalogo() {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-fondo min-h-screen">
       <div id="home" className="bg-[url(src/assets/portada2.png)] bg-no-repeat bg-cover bg-center h-50 flex flex-col items-center justify-center text-center p-6">
         <h1 id="titulo" className="font-bold mb-6 animate-fadeIn text-white">Les presentamos nuestros productos</h1>
         <p id="subtitulo" className="mx-auto animate-fadeInUp text-white">
@@ -27,11 +27,10 @@ function Catalogo() {
               <div className="p-5">
                 <h2 className="text-xl font-semibold text-gray-800 mb-2 text-center">{producto.nombre}</h2>
                 <p className="text-gray-600 text-sm mb-3 h-20 overflow-y-auto text-center ">{producto.descripcion}</p>
-                <p id="precio" className="justify-between text-2xl font-bold text-green-500 no-underline hover:underline">{producto.precio}
-                <button className="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">
+                <p id="precio" className="text-2xl font-bold text-green-500 text-center no-underline hover:underline">{producto.precio}</p>
+                <button id='btnCarro' className="w-full font-bold py-2 px-4 rounded-lg transition-colors duration-300">
                   Añadir al Carrito
                 </button>
-                </p>
               </div>
             </div>
           ))}
