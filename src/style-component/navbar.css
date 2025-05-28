@@ -14,7 +14,7 @@
 }
 
 #brand:hover {
-  color: #d1f7e1; /* Color verde al hacer hover */
+  color: #28c147; /* Color verde al hacer hover */
 }
 
 /* Estilos para los enlaces del Navbar */
@@ -63,11 +63,11 @@
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-  .navbar-brand {
+  #brand {
     font-size: 1.5rem; /* Reducir el tamaño de la fuente en móviles */
   }
 
-  .nav-link {
+  #nav-links {
     margin: 0.5rem 0; /* Aumentar el espaciado entre enlaces en móviles */
     padding: 0.5rem 1rem; /* Aumentar el padding para facilitar el clic */
     width: 100%; /* Hacer que los enlaces ocupen todo el ancho */ /* Estilos para el Navbar en modo oscuro en dispositivos móviles */

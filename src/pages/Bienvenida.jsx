@@ -4,13 +4,14 @@ import CardGroup from "react-bootstrap/CardGroup"; // Se mantiene para la secci�
 import { FloatButton } from "antd"; // Importa FloatButton de antd
 import { UpOutlined } from "@ant-design/icons"; // Importa el ícono UpOutlined
 import { Link } from "react-router";
+import Socialbtn from "../components/Socialfooter.jsx";
 
 
 const Bienvenida = () => {
   return (
     <div className="!bg-fondo">
       {/* Sección Hero */}
-      <div className="!bg-[url(src/assets/Portada.png)] !bg-no-repeat !bg-cover !bg-center !h-80 !flex !flex-col !items-center !justify-center !text-center !p-6">
+      <div className="!bg-[url(src/assets/Portada.png)] !bg-no-repeat !bg-cover !bg-center !h-60 !flex !flex-col !items-center !justify-center !text-center !p-6">
         <h1 className="!font-bold !mb-6 !animate-fadeIn !text-white !text-5xl">Bienvenidos a Naturalmente Tucumán</h1>
         <p className="!mx-auto !animate-fadeInUp !text-white !text-xl">
           Naturalmente es una tienda online de productos naturales y orgánicos.
@@ -26,10 +27,10 @@ const Bienvenida = () => {
             <Card className="!m-3 !flex-grow !basis-full !sm:basis-1/2 !md:basis-1/3 !lg:basis-1/4 !max-w-sm !bg-white !rounded-xl !shadow-lg overflow-hidden transform hover:scale-105 !transition-transform !duration-200 !ease-in-out">
               <Card.Img
                 variant="top"
-                src="src/assets/different-pills-herbs-flowers-on-260nw-2380501293.jpg"
+                src="src/assets/AlimentosSinTacc.png"
                 alt="Producto destacado 1"
               />
-              <Card.Body>
+              <Card.Body className="p-5 !flex !flex-col !flex-grow">
                 <Card.Title className="!text-center !font-semibold">Sin TACC</Card.Title>
                 <Card.Text className="!text-center">
                   Una selección especial de nuestros productos más populares y recomendados por nuestros clientes.
@@ -39,10 +40,10 @@ const Bienvenida = () => {
             <Card className="!m-3 !flex-grow !basis-full !sm:basis-1/2 !md:basis-1/3 !lg:basis-1/4 !max-w-sm !bg-white !rounded-xl !shadow-lg overflow-hidden transform hover:scale-105 !transition-transform !duration-200 !ease-in-out">
               <Card.Img
                 variant="top"
-                src="src/assets/alimentos-dieteticos.jpg"
+                src="src/assets/NovedadSaludable.png"
                 alt="Novedad saludable"
               />
-              <Card.Body>
+              <Card.Body className="p-5 !flex !flex-col !flex-grow">
                 <Card.Title className="!text-center !font-semibold">Novedad Saludable</Card.Title>
                 <Card.Text className="!text-center">
                   Descubre la calidad y el sabor que nos caracteriza con estas ofertas imperdibles.
@@ -52,10 +53,11 @@ const Bienvenida = () => {
             <Card className="!m-3 !flex-grow !basis-full !sm:basis-1/2 !md:basis-1/3 !lg:basis-1/4 !max-w-sm !bg-white !rounded-xl !shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-200 ease-in-out">
               <Card.Img
                 variant="top"
-                src="src/assets/alimentos-light-678x381.jpg"
+                src="src/assets/dieta.jpg"
                 alt="Opción ligera"
+                className="!w-full !h-48 !object-cover"
               />
-              <Card.Body>
+              <Card.Body className="p-5 !flex !flex-col !flex-grow">
                 <Card.Title className="!text-center !font-semibold">Opción Ligera</Card.Title>
                 <Card.Text className="!text-center">
                   Ideales para complementar tu dieta y estilo de vida saludable sin sacrificar el sabor.
@@ -100,8 +102,8 @@ const Bienvenida = () => {
       </section>
 
       {/* Sección Nosotros */}
-      <section className="!bg-[url(./src/assets/dietetica.png)] !bg-no-repeat !bg-cover !bg-center h-100 !py-12 !sm:py-16 !lg:py-20 !bg-green-500 !text-white">
-        <div className="!container !mx-auto !px-4 !sm:px-6 !lg:px-8 !text-left !backdrop-blur-sm">
+      <section className="!bg-[url(./src/assets/dietetica.png)] !bg-no-repeat !bg-cover !bg-center !h-100 !py-12 !sm:py-16 !lg:py-20 !bg-green-500 !text-white">
+        <div className="!container !mx-auto !px-4 !sm:px-6 !lg:px-8 !text-left !backdrop-blur-xs">
           <h2 className="!text-2xl !sm:text-4xl !font-bold !mb-6 !sm:mb-8">Nosotros</h2>
           <div className="!max-w-3xl !space-y-4 !text-lg !leading-relaxed">
             <p>Somos una tienda online apasionada por los productos naturales y orgánicos. Nuestro objetivo es brindarte opciones de calidad que contribuyan a tu bienestar y estén al alcance de todos.</p>
@@ -116,6 +118,10 @@ const Bienvenida = () => {
       <footer className="!bg-gray-800 !text-white !text-center !p-6 !mt-12">
         <p>&copy; {new Date().getFullYear()} Naturalmente Tucumán. Todos los derechos reservados.</p>
         <p className="!text-sm !mt-1">Descubre más sobre un estilo de vida saludable con nosotros.</p>
+        
+        <div>
+        <Socialbtn />
+        </div>
       </footer>
 
       <FloatButton.BackTop

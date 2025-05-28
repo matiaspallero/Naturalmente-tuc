@@ -1,34 +1,34 @@
 import React from 'react';
-import '../style-component/catalogo.css'; // Importamos el CSS para estilos personalizados
 import { FloatButton } from "antd"; // Importa FloatButton de antd
 import { UpOutlined } from "@ant-design/icons"; // Importa el ícono UpOutlined
+import Socialbtn from "../components/Socialfooter.jsx";
 
 
 function Catalogo() {
   return (
-    <div className="bg-fondo min-h-screen">
-      <div id="home" className="bg-[url(src/assets/portada2.png)] bg-no-repeat bg-cover bg-center h-50 flex flex-col items-center justify-center text-center p-6">
-        <h1 id="titulo" className="font-bold mb-6 animate-fadeIn text-white">Les presentamos nuestros productos</h1>
-        <p id="subtitulo" className="mx-auto animate-fadeInUp text-white">
+    <div className="!bg-fondo !min-h-screen !p-*">
+      <div className="bg-[url(src/assets/portada2.png)] bg-no-repeat bg-cover bg-center h-52 flex flex-col items-center justify-center text-center p-6"> {/* Asumiendo h-52 (13rem) o ajusta h-50 si es una clase personalizada */}
+        <h1 className="!font-bold !mb-6 !animate-fadeIn text-white !text-3xl !sm:text-4xl">Les presentamos nuestros productos</h1>
+        <p className="!mx-auto animate-fadeInUp text-white text-xl sm:text-2xl">
           Con los mejores precios!!
         </p>
       </div>
 
-      <main id="productos" className="container mx-auto p-4 sm:p-6 lg:p-8">
+      <main className="!container !mx-auto p-4 sm:p-6 lg:p-8">
         {/* Ajustado para un comportamiento responsive estándar: 1 col en xs, 2 en sm, 3 en md, 4 en lg */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="!grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 !mt-8">
           {productosDieteticos.map((producto) => (
-            <div key={producto.id} className="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out">
+            <div key={producto.id} className="bg-white rounded-xl !shadow-lg overflow-hidden transform hover:scale-101 transition-transform duration-300 ease-in-out flex flex-col"> {/* Añadido flex flex-col para mejor manejo de altura interna */}
               <img
                 className="w-full h-56 object-cover"
                 src={producto.imagenUrl}
                 alt={producto.nombre}
               />
-              <div className="p-5">
-                <h2 className="text-xl font-semibold text-gray-800 mb-2 text-center">{producto.nombre}</h2>
-                <p className="text-gray-600 text-sm mb-3 h-20 overflow-y-auto text-center ">{producto.descripcion}</p>
-                <p id="precio" className="text-2xl font-bold text-green-500 text-center no-underline hover:underline">{producto.precio}</p>
-                <button id='btnCarro' className="w-full font-bold py-2 px-4 rounded-lg transition-colors duration-300">
+              <div className="!p-5">
+                <h2 className="!text-xl !font-semibold !text-gray-800 !mb-2 !text-center">{producto.nombre}</h2>
+                <p className="!text-gray-600 !text-sm !mb-3 !h-20 !overflow-y-auto !text-center ">{producto.descripcion}</p>
+                <p className="text-2xl font-bold text-green-500 text-center no-underline">{producto.precio}</p>
+                <button className="w-full font-bold py-2 px-4 rounded-lg transition-colors duration-300 hover:bg-green-600 hover:text-white mt-auto"> {/* Añadido mt-auto para empujar el botón abajo si la card es flex */}
                   Añadir al Carrito
                 </button>
               </div>
@@ -37,9 +37,13 @@ function Catalogo() {
         </div>
       </main>
 
-      <footer className="bg-gray-800 text-white text-center p-6 mt-12">
+      <footer className="bg-gray-800 text-white text-center !p-6 !mt-12">
         <p>&copy; {new Date().getFullYear()} Naturalmente Tucumán. Todos los derechos reservados.</p>
         <p className="text-sm mt-1">Descubre más en nuestras redes sociales.</p>
+        
+        <div>
+        <Socialbtn />
+        </div>
       </footer>
       
       <FloatButton.BackTop
@@ -54,6 +58,7 @@ function Catalogo() {
     </div>
   )
 }
+
 
 // Datos de ejemplo para los productos. En una aplicación real, esto vendría de una API.
 const productosDieteticos = [

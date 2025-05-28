@@ -10,6 +10,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+       //Puedes extender tu tema aquí si es necesario
+       //Ejemplo: Asegúrate que 'fondo', 'grisOscuro', 'grisClaro' estén definidos si los usas como colores personalizados
+      colors: {
+         fondo: '#e9faef', // Reemplaza con tu color real
+         midnight: '#121063',
+         grisOscuro: '#A9A9A9',
+         grisClaro: '#DCDCDC'
+      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
@@ -27,4 +35,5 @@ module.exports = {
     },
   },
   plugins: [],
+  important: true,
 }
