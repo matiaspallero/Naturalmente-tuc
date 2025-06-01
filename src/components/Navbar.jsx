@@ -21,11 +21,11 @@ function NavbarPrincipal() {
   const basePath = "/Bienvenida"; 
 
   return (
-    <nav className="shadow-md sticky top-0 z-50" id='navbar'>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className="!shadow-md !sticky !top-0 !z-50 bg-navFondo" id='navbar'>
+      <div className="!max-w-7xl !mx-auto !px-4 !sm:px-6 !lg:px-8">
+        <div className="!flex !items-center !justify-between !h-16">
           {/* Brand */}
-          <Link to="/" className="flex-shrink-0 text-2xl font-bold" id='brand'>
+          <Link to="/" className="!flex-shrink-0 font-bold text-2xl text-colorletra !hover:text-green-500" id='brand'>
             Naturalmente
           </Link>
 
@@ -34,18 +34,18 @@ function NavbarPrincipal() {
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
+              className="!inline-flex items-center justify-center !p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none !focus:ring-2 focus:ring-inset focus:ring-green-500"
               aria-controls="main-menu"
               aria-expanded={isMenuOpen}
               id='navbar-toggler'
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="!sr-only">Open main menu</span>
               {isMenuOpen ? (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg className="!block !h-6 !w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg className="!block !h-6 !w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               )}
@@ -53,7 +53,7 @@ function NavbarPrincipal() {
           </div>
 
           {/* Desktop Navigation Items (Links + Cart) */}
-          <div className="md:hidden xs:hidden gap-7 lg:flex lg:items-center lg:ml-6 lg:space-x-4 text-4xl">
+          <div className="md:hidden xs:hidden sm:hidden !lg:flex gap-7 lg:flex !lg:items-center lg:ml-6 lg:space-x-4 text-4xl" id='desktop-nav'>
             <Link to="/" className={desktopLinkClasses} id='nav-links'> {/* Assuming #root means the homepage */}
               Inicio
             </Link>
@@ -75,26 +75,21 @@ function NavbarPrincipal() {
                 justifyContent: "center",
               }}
             >
-              <Tooltip title="Comprar">
-                <IconButton sx={{ color: 'rgb(22 101 52)' /* text-green-700 */ }}>
-                  <ShoppingCartIcon />
-                </IconButton>
-              </Tooltip>
             </Box>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu (Dropdown) */}
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden border-t border-grey-200 text-center`} id="main-menu">
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <div className={`${isMenuOpen ? 'block' : 'hidden'} !lg:hidden !border-t !border-grey-200 !text-center`} >
+        <div className="!px-2 !pt-2 !pb-3 !space-y-1 !sm:px-3">
           <Link to="/" className={mobileLinkClasses} id='nav-links-tog'>Inicio</Link>
           <Link to="/Catalogo" className={mobileLinkClasses} id='nav-links-tog'>Productos</Link>
           <Link to={`${basePath}#nosotros`} className={mobileLinkClasses} id='nav-links-tog'>Nosotros</Link>
           <Link to={`${basePath}#ayuda`} className={mobileLinkClasses} id='nav-links-tog'>Ayuda</Link>
         </div>
         {/* Cart Icon Box in Mobile Menu - Replicating original Box styling for mobile */}
-        <div className="border-t border-green-200 pt-3 pb-3 px-2 sm:px-3">
+        <div className="!border-t !border-green-200 !pt-3 !pb-3 !px-2 !sm:px-3">
           <Box
             className={{
               display: "flex",
@@ -104,11 +99,6 @@ function NavbarPrincipal() {
               color: "0d5725",
             }}
           >
-            <Tooltip title="Comprar">
-              <IconButton sx={{ color: 'rgb(22 101 52)' /* text-green-700 */ }}>
-                <ShoppingCartIcon />
-              </IconButton>
-            </Tooltip>
           </Box>
         </div>
       </div>

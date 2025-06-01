@@ -20,7 +20,7 @@ function Catalogo() {
           {productosDieteticos.map((producto) => (
             <div key={producto.id} className="bg-white rounded-xl !shadow-lg overflow-hidden transform hover:scale-101 transition-transform duration-300 ease-in-out flex flex-col"> {/* Añadido flex flex-col para mejor manejo de altura interna */}
               <img
-                className="w-full h-56 object-cover"
+                className="!w-full !h-56 !object-cover"
                 src={producto.imagenUrl}
                 alt={producto.nombre}
               />
@@ -34,7 +34,7 @@ function Catalogo() {
               </div>
             </div>
           ))}
-        </div>
+        </div>          !
       </main>
 
       <footer className="bg-gray-800 text-white text-center !p-6 !mt-12">

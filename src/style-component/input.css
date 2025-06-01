@@ -4,8 +4,12 @@
 @theme {
     --color-midnight: #121063;
     --color-fondo: #e9faef;
+    --color-navFondo: #d1f7e1;
     --color-grisOscuro: #A9A9A9;
     --color-grisClaro: #DCDCDC;
+    --color-colorletra: #0d5725;
+
+    --breakpoint-xsm: 500px;
 }
 
 

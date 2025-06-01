@@ -1,13 +1,13 @@
 
 
 /* Estilos generales para el Navbar */
-#navbar {
+.navbar {
   background-color: #d1f7e1; /* Fondo verde claro */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 /* Estilos para el Brand (Logo o nombre de la marca) */
-#brand {
+.brand {
   font-size: 1.5rem;
   color: #0d5725; /* Color de texto oscuro */
   align-items: center;
@@ -36,22 +36,34 @@
   align-items: center;
 }
 
+#nav-links-tog:hover {
+  color: #28c147; /* Color verde oscuro al hacer hover */
+  background-color: #d1f7e1;
+}
+
 #main-menu {
   justify-content: center;
   color: #d1f7e1;
 }
 
+/*@media (max_width: 400px) {
+  #desktop-nav {
+    display: none;
+  
+  }
+}
+*/
 .me-auto {
   margin-left: 50%;
 }
 
 /* Estilos para el botón de toggle en dispositivos móviles */
-#navbar-toggler {
+.navbar-toggler {
   border: none; /* Sin borde */
   padding: 0.5rem; /* Espaciado interno */
 }
 
-#navbar-toggler:focus {
+.navbar-toggler:focus {
   outline: none; /* Sin contorno al hacer focus */
 }
 
@@ -63,11 +75,11 @@
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-  #brand {
+  .brand {
     font-size: 1.5rem; /* Reducir el tamaño de la fuente en móviles */
   }
 
-  #nav-links {
+  .nav-links {
     margin: 0.5rem 0; /* Aumentar el espaciado entre enlaces en móviles */
     padding: 0.5rem 1rem; /* Aumentar el padding para facilitar el clic */
     width: 100%; /* Hacer que los enlaces ocupen todo el ancho */ /* Estilos para el Navbar en modo oscuro en dispositivos móviles */
