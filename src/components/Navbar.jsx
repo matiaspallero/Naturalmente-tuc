@@ -1,8 +1,4 @@
 import { useState } from 'react';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
-import Box from "@mui/material/Box";
 import { Link } from "react-router";
 import "../style-component/navbar.css";
 
@@ -67,15 +63,6 @@ function NavbarPrincipal() {
               Ayuda
             </Link>
             {/* Cart Icon Box - Placed as the last item in the desktop nav group */}
-            <Box
-              sx={{
-                display: "flex",
-                // gap: 2, // Kept from original, useful if more items were in Box
-                width: { xs: '50%', lg: 'auto' }, // Responsive width
-                justifyContent: "center",
-              }}
-            >
-            </Box>
           </div>
         </div>
       </div>
@@ -89,18 +76,6 @@ function NavbarPrincipal() {
           <Link to={`${basePath}#ayuda`} className={mobileLinkClasses} id='nav-links-tog'>Ayuda</Link>
         </div>
         {/* Cart Icon Box in Mobile Menu - Replicating original Box styling for mobile */}
-        <div className="!border-t !border-green-200 !pt-3 !pb-3 !px-2 !sm:px-3">
-          <Box
-            className={{
-              display: "flex",
-              gap: 2, // Kept from original
-              width: "100%", // Takes full width in mobile dropdown
-              justifyContent: "center", // Centers the icon
-              color: "0d5725",
-            }}
-          >
-          </Box>
-        </div>
       </div>
     </nav>
   );

@@ -3,23 +3,16 @@ import { FloatButton } from 'antd';
 import { UpOutlined } from '@ant-design/icons';
 
 const BotonFlotante = () => (
-  <div
-    style={{
-      height: '700vh',
-      padding: 10,
-    }}
-  >
+  // El div exterior con altura '700vh' y padding es probablemente para demostración/prueba.
+  // Si es parte del layout deseado, también se puede convertir: className="h-[700vh] p-[10px]"
+  // Asegúrate de que este div tenga sentido en el contexto de tu layout general.
+  <div className="h-[700vh] p-[10px]">
     <FloatButton.BackTop
-      icon={<UpOutlined />}
-      style={{
-        backgroundColor: '#28c147',
-        borderColor: '#1890ff',
-        color: '#fff ',
-      }}
-      visibilityHeight={100}
-    />
+       icon={<UpOutlined />}
+       className="!bg-[#28c147] !border-[#1890ff] !text-white" // Clases de Tailwind
+       visibilityHeight={100}
+     />
   </div>
 );
 
 export default BotonFlotante;
-

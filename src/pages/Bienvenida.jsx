@@ -1,6 +1,4 @@
 import React from "react";
-import Card from "react-bootstrap/Card"; // Se mantiene para la sección "Destacados"
-import CardGroup from "react-bootstrap/CardGroup"; // Se mantiene para la sección "Destacados"
 import { FloatButton } from "antd"; // Importa FloatButton de antd
 import { UpOutlined } from "@ant-design/icons"; // Importa el ícono UpOutlined
 import { Link } from "react-router";
@@ -22,49 +20,48 @@ const Bienvenida = () => {
       <section className="!py-12 !sm:py-16 !lg:py-20">
         <div className="!container !mx-auto !px-4 !sm:px-6 !lg:px-8">
           <h2 className="!text-3xl !sm:text-4xl !font-bold !text-center !text-gray-800 !mb-8 !sm:mb-12 !mt-4">Destacados</h2>
-          {/* Usamos CardGroup de react-bootstrap. Tailwind se usa para el estilo individual de las Card. */}
-          <CardGroup className="!flex !flex-wrap !justify-center !gap-6 "> {/* Añadido flex-wrap y justify-center para mejor responsividad con CardGroup */}
-            <Card className="!m-3 !flex-grow !basis-full !sm:basis-1/2 !md:basis-1/3 !lg:basis-1/4 !max-w-sm !bg-white !rounded-xl !shadow-lg overflow-hidden transform hover:scale-105 !transition-transform !duration-200 !ease-in-out">
-              <Card.Img
-                variant="top"
+          {/* Sección Destacados con Tailwind CSS */}
+          <div className="!flex !flex-wrap !justify-center !gap-6 ">
+            <div className="!m-3 !flex-grow !basis-full !sm:basis-1/2 !md:basis-1/3 !lg:basis-1/4 !max-w-sm !bg-white !rounded-xl !shadow-lg overflow-hidden transform hover:scale-105 !transition-transform !duration-200 !ease-in-out !flex !flex-col">
+              <img
                 src="src/assets/AlimentosSinTacc.png"
                 alt="Producto destacado 1"
+                className="!w-full !h-48 !object-cover" // Asegúrate de tener clases para el tamaño y ajuste de la imagen
               />
-              <Card.Body className="p-5 !flex !flex-col !flex-grow">
-                <Card.Title className="!text-center !font-semibold">Sin TACC</Card.Title>
-                <Card.Text className="!text-center">
+              <div className="p-5 !flex !flex-col !flex-grow">
+                <h3 className="!text-center !font-semibold !text-xl !mb-2">Sin TACC</h3>
+                <p className="!text-center !text-gray-600 !text-sm !mb-3">
                   Una selección especial de nuestros productos más populares y recomendados por nuestros clientes.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card className="!m-3 !flex-grow !basis-full !sm:basis-1/2 !md:basis-1/3 !lg:basis-1/4 !max-w-sm !bg-white !rounded-xl !shadow-lg overflow-hidden transform hover:scale-105 !transition-transform !duration-200 !ease-in-out">
-              <Card.Img
-                variant="top"
+                </p>
+              </div>
+            </div>
+            <div className="!m-3 !flex-grow !basis-full !sm:basis-1/2 !md:basis-1/3 !lg:basis-1/4 !max-w-sm !bg-white !rounded-xl !shadow-lg overflow-hidden transform hover:scale-105 !transition-transform !duration-200 !ease-in-out !flex !flex-col">
+              <img
                 src="src/assets/NovedadSaludable.png"
                 alt="Novedad saludable"
+                className="!w-full !h-48 !object-cover"
               />
-              <Card.Body className="p-5 !flex !flex-col !flex-grow">
-                <Card.Title className="!text-center !font-semibold">Novedad Saludable</Card.Title>
-                <Card.Text className="!text-center">
+              <div className="p-5 !flex !flex-col !flex-grow">
+                <h3 className="!text-center !font-semibold !text-xl !mb-2">Novedad Saludable</h3>
+                <p className="!text-center !text-gray-600 !text-sm !mb-3">
                   Descubre la calidad y el sabor que nos caracteriza con estas ofertas imperdibles.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card className="!m-3 !flex-grow !basis-full !sm:basis-1/2 !md:basis-1/3 !lg:basis-1/4 !max-w-sm !bg-white !rounded-xl !shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-200 ease-in-out">
-              <Card.Img
-                variant="top"
+                </p>
+              </div>
+            </div>
+            <div className="!m-3 !flex-grow !basis-full !sm:basis-1/2 !md:basis-1/3 !lg:basis-1/4 !max-w-sm !bg-white !rounded-xl !shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-200 ease-in-out !flex !flex-col">
+              <img
                 src="src/assets/dieta.jpg"
                 alt="Opción ligera"
                 className="!w-full !h-48 !object-cover"
               />
-              <Card.Body className="p-5 !flex !flex-col !flex-grow">
-                <Card.Title className="!text-center !font-semibold">Opción Ligera</Card.Title>
-                <Card.Text className="!text-center">
+              <div className="p-5 !flex !flex-col !flex-grow">
+                <h3 className="!text-center !font-semibold !text-xl !mb-2">Opción Ligera</h3>
+                <p className="!text-center !text-gray-600 !text-sm !mb-3">
                   Ideales para complementar tu dieta y estilo de vida saludable sin sacrificar el sabor.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </CardGroup>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -102,7 +99,7 @@ const Bienvenida = () => {
       </section>
 
       {/* Sección Nosotros */}
-      <section className="!bg-[url(./src/assets/dietetica.png)] !bg-no-repeat !bg-cover !bg-center !h-100 !py-12 !sm:py-16 !lg:py-20 !bg-green-500 !text-white">
+      <section id="nosotros" className="!bg-[url(./src/assets/dietetica.png)] !bg-no-repeat !bg-cover !bg-center !h-100 !py-12 !sm:py-16 !lg:py-20 !bg-green-500 !text-white">
         <div className="!container !mx-auto !px-4 !sm:px-6 !lg:px-8 !text-left !backdrop-blur-xs">
           <h2 className="!text-2xl !sm:text-4xl !font-bold !mb-6 !sm:mb-8">Nosotros</h2>
           <div className="!max-w-3xl !space-y-4 !text-lg !leading-relaxed">
@@ -125,14 +122,11 @@ const Bienvenida = () => {
       </footer>
 
       <FloatButton.BackTop
-        icon={<UpOutlined />}
-        style={{
-          backgroundColor: "#28c147", // Color de fondo verde
-          borderColor: "#0b4e27", // Color del borde
-          color: "#fff", // Color del ícono
-        }}
-        visibilityHeight={200} // Se muestra después de desplazarse 200px
+          icon={<UpOutlined />}
+          className="!bg-[#28c147] !border-[#1890ff] !text-white" // Clases de Tailwind
+          visibilityHeight={100}
       />
+
     </div>
   );
 };

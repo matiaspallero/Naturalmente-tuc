@@ -45,16 +45,13 @@ function Catalogo() {
         <Socialbtn />
         </div>
       </footer>
-      
+
       <FloatButton.BackTop
-        icon={<UpOutlined />}
-        style={{
-          backgroundColor: "#28c147", // Color de fondo verde
-          borderColor: "#0b4e27", // Color del borde
-          color: "#fff", // Color del ícono
-        }}
-        visibilityHeight={200} // Se muestra después de desplazarse 200px
+          icon={<UpOutlined />}
+          className="!bg-[#28c147] !border-[#1890ff] !text-white" // Clases de Tailwind
+          visibilityHeight={100}
       />
+
     </div>
   )
 }

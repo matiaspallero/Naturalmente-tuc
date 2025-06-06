@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router";
 import "./style-component/input.css";
+import "tailwindcss";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
